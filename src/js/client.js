@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Layout from "./components/Layout";
+import ToDoContainer from "./components/ToDoContainer";
 
 const app = document.getElementById('app');
-ReactDOM.render(<Layout/>, app);
+ReactDOM.render(<ToDoContainer/>, app);
