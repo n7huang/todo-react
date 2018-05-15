@@ -27,31 +27,6 @@ export default class ToDoList extends React.Component {
     this.props.addToDo("<Click To Edit>");
   }
 
-  // changed to edit based on index instead
-  // renderItemOrEdit(todo) {
-  // 	if (this.state.editing === todo.id) {
-  // 		return (
-  // 			<li key={ `editing-${todo.id}` } className="todo-list-item">
-  // 				<button onClick={() => this.handleRemove(todo.id)} >Remove</button>
-  // 				<input autoFocus
-  // 					onKeyDown={e => this.handleEdit(e, todo.id)}
-  // 					type="text"
-  // 					className="ctrl"
-  // 				/>
-  // 			</li>
-  // 		)
-  // 	} else {
-  // 		return (
-  // 			<li key={todo.id}
-  // 					className="todo-list-item">
-  // 				<button onClick={() => this.handleRemove(todo.id)} >Remove</button>
-  // 				<span onClick={() => this.toggleEdit(todo.id)}>{todo.text}</span>
-  // 			</li>
-  // 		)
-  // 	}
-  // }
-
-  /*this.renderItemOrEdit(todo)*/ // was in map
   render() {
   	return (
   		<div>

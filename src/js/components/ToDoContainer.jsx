@@ -1,4 +1,5 @@
 import React from "react";
+import uuid from 'uuid';
 
 import Header from "./Header";
 import Title from "./Header/Title";
@@ -13,7 +14,7 @@ export default class ToDoContainer extends React.Component {
   addToDo = (text) => { // arrow functions! ES6
     const item = { // items are now objects: {text, id}
       text,
-      id: Math.floor(Math.random() * Math.floor(400)) // TODO: change this to UUID
+      id: uuid.v4()
     };
 
     this.setState({todos: this.state.todos.concat([item])});
@@ -58,6 +59,7 @@ export default class ToDoContainer extends React.Component {
       <div>
         <div>Total: {this.state.todos.length}</div>
         <Header title={"To-Do List"} />
+        <h3>To-Do</h3>
         <ToDoList 
           todos={this.state.todos} 
           addToDo={this.addToDo}
