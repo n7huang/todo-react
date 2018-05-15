@@ -29,6 +29,7 @@ export default class ToDoContainer extends React.Component {
   render() {
     return (
       <div>
+        <div>Total: {this.state.todos.length}</div>
         <Header title={"To-Do List"} />
         <ToDoList 
           todos={this.state.todos} 

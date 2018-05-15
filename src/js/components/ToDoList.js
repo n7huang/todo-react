@@ -1,7 +1,5 @@
 import React from "react";
 
-import ToDoItem from "./ToDoItem"
-
 export default class ToDoList extends React.Component {
 
 	constructor(props) {
@@ -23,7 +21,7 @@ export default class ToDoList extends React.Component {
 	}
 
 	handleAdd(e) {
-    this.props.addToDo("new item");
+    this.props.addToDo("<Click To Edit>");
   }
 
   toggleEdit(todoId) {
@@ -65,19 +63,4 @@ export default class ToDoList extends React.Component {
   		</div>
   	);
   }
-
-	// render() {
-	// 	const listItems = this.props.todos.map((todo, i) => 
-	// 		<li key={i}>
-	// 			<button onClick={this.handleRemove.bind(this, i)} >Remove</button>
-	// 			<button onClick={this.handleEdit.bind(this, todo)} >Edit</button>
-	// 			{todo}
-	// 		</li>);
- //    return (
- //    	<div>
-	//       <ul>{listItems}</ul>
-	//       <button onClick={this.handleAdd.bind(this)}>Add New Item</button>
-	//     </div>
- //    );
- //  }
 }
